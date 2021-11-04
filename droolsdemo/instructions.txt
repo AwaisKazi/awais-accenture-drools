@@ -1,0 +1,12 @@
+1. Checkout Git repo
+2. Create 2 Controllers (i. Credit Increase ii. Account denied)
+3. Create drools xls file for each case with the following rules;
+	1. If the customer has been with us for 5+ years, increase credit limit by 10%
+	2. been with us for 10+ years, increase credit limit by 30%
+	3. been with us for 20+ years, increaes credit limit by 100%
+	4. if Age is greater than 40, also allow the user to call us and increase credit by 20% more.
+	5. If Age is greater than 50, also allow the user to call us and increase credit by 100%
+4. Create 2 HTML files with thymeleaf variables (for credit limit, customer name, increase credit limit, previous credit limit).
+5. When the controller is called with the GET request with variables, fire all the rules from drools, generate a letter from the HTML template and return it.
+
+
