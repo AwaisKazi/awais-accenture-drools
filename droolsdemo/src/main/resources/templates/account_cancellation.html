@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <p th:text="'Dear ' + ${customer.name}"></p>>
+        <div th:if ="${customer.cancel}">
+            <div th:if="${customerRejoin}">
+                <p>
+                    This letter is to inform you that your account has been closed due to inactivity. Our system
+                    has detected no activity from your account for <span th:text="${customer.yearsInactive}"/> years. 
+                    A check with your account's remaining funds has been issued and is ready to send to your address on file.
+                    Click Here to confirm and recieve your funds.
+                </p>
+
+                <p>
+                    If you would like, you can request to reactivate your account by calling us at +1 123 123 1234.
+                </p>
+            </div>
+            
+            <div th:unless="${customerRejoin}">
+                <p>
+                    This letter is to inform you that your account has been closed. Our system
+                    has detected $<span th:text="${customer.overdraftFees}"/> due from your account in overdraft fees. A bill has been issued and sent to the 
+                    address on file.
+                </p>
+
+            </div>
+        </div>
+
+        <div th:unless="${customer.cancel}">
+            <p>
+                This letter is to thank you for your commitment to us.
+            </p>
+        </div>
+
+    </body>
+</html>
