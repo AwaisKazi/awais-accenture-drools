@@ -1,0 +1,12 @@
+<html>
+    <body>
+    <p th:text="'Dear ' + ${name}"></p>
+    <p th:if="${!activeCustomer}">
+        This letter is to inform your credit score has dropped you to  <span th:text=" ${creditScore}"></span>.
+        We are regretful to say that because your credit score is now below the minimum threshold, we can no longer offer your our services.
+    </p>
+    <p th:if="${activeCustomer}">
+       This letter is to thank you for continuing to use our services. We appreicate your loyalty.
+    </p>
+    <body>
+</html>

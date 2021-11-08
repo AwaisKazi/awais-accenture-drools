@@ -1,12 +1,15 @@
 <html>
     <body>
-        <p th:text="'Dear ' + ${customerName}"></p>>
-        <p>
-            This letter is to inform you that your credit limit has been increased from ${previousCreditLimit} to ${newCreditLimit}
-            We are glad that you are a part of our customer base, and gave us the opportunity to serve you for your banking purposes!
-        </p>
-        <p th:if="${customerAllowedExtension}">
-            If you would like, you can request us an even further credit limit of ${extendedLimit} by calling us at +1 123 123 1234
+       
+        <p th:if="${eligibleCreditIncrease}">
+             <p th:text="'Dear ' + ${customerName}"></p>
+             <p>
+                 This letter is to inform you that your credit limit has been increased from <span th:text=" ${previousCreditLimit}"></span> to <span th:text=" ${newCreditLimit}"></span>.
+                 We are glad that you are a part of our customer base, and gave us the opportunity to serve you for your banking purposes!
+            </p>
+            <p th:if="${customerAllowedExtension}">
+                If you would like, you can request us an even further credit limit of  <span th:text=" ${bonusIncreasePercent}"></span>% by calling us at +1 123 123 1234
+             </p>
         </p>
     </body>
 </html>
