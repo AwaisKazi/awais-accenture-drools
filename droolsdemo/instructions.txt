@@ -10,3 +10,7 @@
 5. When the controller is called with the GET request with variables, fire all the rules from drools, generate a letter from the HTML template and return it.
 
 
+variables
+credit limit, customer name, increase credit limit, previous credit limit, customerYears,creditIncreasePercentage, age,
+
+100
