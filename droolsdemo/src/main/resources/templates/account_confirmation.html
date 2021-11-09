@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <p th:text="'Dear ' + ${customerName}"></p>>
+        <p>
+            This letter is to inform you that we have received your application. Here are the results of your application:
+        </p>
+        <p th:if="${isActive} == false">
+            We are sorry to inform you that you are not eligible to create an account with us today.
+            Your current credit score of  <span th:text= ${creditScore}></span> is not eligible. If you have any questions
+            feel free to call us at +1 123 123 1234
+        </p>
+        <p th:if="${isActive} == true">
+            We are happy to inform you that you are eligible.
+            Your current credit score of <span th:text= ${creditScore}></span> is eligible. If you have any questions
+            feel free to call us at +1 123 123 1234
+        </p>
+    </body>
+</html>
